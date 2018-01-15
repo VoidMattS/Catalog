@@ -1,0 +1,66 @@
+.container-fluid{
+    background-color: #afafaf;
+
+}
+
+header{
+    background-color: rgb(34, 34, 41); 
+    color: white;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    
+}
+
+a{
+    color: white;
+    border-width:1px;
+}
+a:visited{
+    color:white;
+}
+a:active{
+    color:white;
+}
+a:focus{
+    color:white;
+}
+a:hover{
+    color: white;
+}
+
+p{
+    font-size: 45px;
+}
+
+.btn{
+    color:black;
+
+}
+
+.loginbutton{
+    font-size: 45px ;
+    color: white;
+}
+
+.panel{
+    background-color: rgb(58, 59, 58);
+    color: white;
+    font-size: 15px;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.panel-header{
+    padding: 10px 10px 10px 10px;
+    font-size: 50px
+}
+
+.panel-body{
+    padding-top: 50px;
+}
+
+.product-details{
+    font-size: 45px;
+}
+
+

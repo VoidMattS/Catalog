@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href = "{{url_for('static', filename = 'style.css')}}">
+        <link rel = "stylesheet" href = "{{url_for('static', filename = 'bootstrap.min.css')}}">
+    </head>
+    <body>
+        <div class = "container-fluid">
+            <header class = "row">
+                <div class = "col-md-9 title">
+                     <h1>Welcome to the Sports Catalog</h1>
+                </div>
+                <div class = "col-md-3 loginbutton float-right">
+                       
+                            {%if 'email' not in session%}
+                            <a href='{{ url_for("showLogin") }}'>Login</a>
+                            {%else%}
+                            <a href='{{ url_for("gdisconnect") }}'>Logout</a>
+                            {%endif%}
+                 
+                </div>
+            </header>
+            <div class = "row">
+                <div class = "panel panel-default flex-container">
+                    <div class = "panel-header col-md-12">
+                        <a href = "{{url_for('newCategory')}}">Create New Category</a>
+                        </br></div>
+                        <div class = "panel-body ">
+                            {%for i in category%}
+
+                            <a href = "{{url_for('showCatItems', category_id = i.id)}}"><p>{{i.name}}</p></a>
+                            <a href = "{{url_for('deleteCategory', category_id = i.id)}}"><button type = "button" class = "btn">Delete</button></a>
+
+                            </br></br>
+                            {% endfor %}
+                        </div>
+                </div>
+            </div>    
+        </div>
+    </body>
+</html>
